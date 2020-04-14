@@ -39,6 +39,7 @@ body {
     font-size: 2.15rem;
     letter-spacing: 1px;
     line-height: 3.2rem;
+    margin-bottom: 15px;
     &--light {
       @include font_light;
     }
@@ -49,5 +50,6 @@ body {
   &__text {
     @include font_reg;
     color: $grayishBlue;
+    line-height: 1.5rem;
   }
 }
