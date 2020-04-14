@@ -135,4 +135,28 @@ body {
   font-size: 15px;
 }
 
+.hero {
+  padding: 80px 0 25px;
+  text-align: center;
+}
+.hero__title {
+  color: #4c4e61;
+  font-size: 2.15rem;
+  letter-spacing: 1px;
+  line-height: 3.2rem;
+}
+.hero__title--light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+}
+.hero__title--heavy {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+.hero__text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #a3a5ae;
+}
+
 /*# sourceMappingURL=style.css.map */
