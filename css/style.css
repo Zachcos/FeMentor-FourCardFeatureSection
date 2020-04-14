@@ -129,13 +129,29 @@ table {
   border-spacing: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 /* Variables and Mixins */
 /* End Variables and Mixins */
 body {
   font-size: 15px;
+  background: #fafafa;
+}
+
+.card--push {
+  transform: translateY(60%);
+}
+@media screen and (max-width: 1115px) {
+  .card--push {
+    transform: none;
+  }
 }
 
 .hero {
+  margin: 0 auto;
+  max-width: 500px;
   padding: 80px 0 25px;
   text-align: center;
 }
@@ -159,6 +175,103 @@ body {
   font-weight: 400;
   color: #a3a5ae;
   line-height: 1.5rem;
+}
+
+.cardsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 25px auto;
+  max-width: 1140px;
+}
+.cardsWrapper .card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 27px 9px rgba(163, 165, 174, 0.15), 0px 10px 14px -8px rgba(84, 135, 186, 0.25);
+  margin: 15px 0;
+  padding-bottom: 10px;
+  position: relative;
+  width: 345px;
+}
+.cardsWrapper .card__accent {
+  height: 4px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.cardsWrapper .card__container {
+  margin: 25px auto;
+  width: 80%;
+}
+.cardsWrapper .card__container .card__title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #4c4e61;
+  font-size: 1.25rem;
+  margin: 35px 0 15px 0;
+}
+.cardsWrapper .card__container .card__text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #a3a5ae;
+  font-size: 0.8rem;
+  line-height: 1.4rem;
+}
+.cardsWrapper .card__container .card__icon {
+  height: 100px;
+  position: relative;
+  width: 100%;
+}
+.cardsWrapper .card__container .card__icon img {
+  bottom: 0;
+  position: absolute;
+  right: 0;
+}
+.cardsWrapper .card::after {
+  content: "";
+  border-radius: 8px 8px 0 0;
+  height: 4px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.cardsWrapper .card--cyan::after {
+  background-color: #45d3d3;
+}
+.cardsWrapper .card--red::after {
+  background-color: #ea5353;
+}
+.cardsWrapper .card--orange::after {
+  background-color: #fcaf4a;
+}
+.cardsWrapper .card--blue::after {
+  background-color: #549ef2;
+}
+
+@media screen and (max-width: 1115px) {
+  .cardsWrapper {
+    max-width: 800px;
+  }
+  .cardsWrapper .card--blue {
+    order: 4;
+  }
+}
+@media screen and (max-width: 735px) {
+  .hero {
+    max-width: 300px;
+  }
+  .hero__title {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+  }
+  .hero__text {
+    line-height: 1.5rem;
+  }
+
+  .cardsWrapper {
+    max-width: 500px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
